@@ -1,100 +1,140 @@
 # GridSync - Decentralized Automated Electricity Top-Up System
 
-GridSync is a decentralized, automated electricity top-up system designed for prepaid energy markets like those in Kenya and other developing regions. It eliminates the outdated, manual process of entering long tokens into physical meters and replaces it with a smart, Web3-powered solution that leverages real-time electricity pricing and decentralized trading strategies.
+**GridSync** is a decentralized, automated electricity top-up system designed for prepaid energy markets like those in Kenya and other developing regions. It eliminates the outdated, manual process of entering long tokens into physical meters and replaces it with a smart, **Solana-powered solution** that leverages real-time electricity pricing and decentralized trading strategies.
 
-## The Problem
+---
 
-In many parts of the world, consumers must prepay for electricity and manually enter 20-digit tokens into meters. This system is time-consuming, prone to errors, and blind to market fluctuations.
+## 🔌 The Problem
 
-## Our Solution
+In many parts of the world, consumers must **prepay for electricity** and manually enter **20-digit tokens** into meters. This system is:
 
-GridSync automates this process by:
-1. **Direct Payment Integration** - Linking payments directly to meter IDs, automatically crediting electricity without manual input
-2. **Web3 Trading Integration** - Using 1inch's Limit Order Protocol to allow users to trade for electricity when prices are favorable
-3. **Smart Execution** - Automatically executing trades when conditions are met (e.g., lower electricity rates at night)
-4. **Instant Delivery** - Electricity tokens are instantly credited to the user's meter with no manual input required
+* Time-consuming
+* Prone to errors
+* Blind to energy price fluctuations
 
-## How It Works
+This creates inefficiencies for both **consumers** and **utility providers**, leaving people paying more than they should.
 
-1. **Payment**: User pays using fiat or crypto via a simple interface
-2. **Limit Order Setup**: System creates a limit order using 1inch's Limit Order Protocol, waiting for favorable prices
-3. **Execution**: Smart contract automatically executes the trade when conditions are met
-4. **Credit Delivery**: Electricity token is instantly credited to the user's meter
+---
 
-## Benefits
+## ⚡ Our Solution
 
-- **Consumers** save money by buying electricity at off-peak hours
-- **Utility companies** benefit from smoother demand management
-- **Scalable** across any country with prepaid meter systems
+GridSync automates prepaid electricity purchases through **Web3 + Solana integration**:
 
-## Technology Stack
+1. **Direct Payment Integration** – Linking payments directly to **meter IDs**, automatically crediting electricity without manual input.
+2. **Solana Trading Strategies** – Users deposit SOL and GridSync executes automated trading strategies using **Solana smart contracts**.
+3. **Smart Execution** – GridSync buys electricity at **optimal times** (like off-peak hours at night) for maximum savings.
+4. **Instant Delivery** – Tokens are instantly credited to the user’s meter — no manual typing required.
+
+---
+
+## ⚙️ How It Works
+
+1. **Payment**: User pays via fiat or crypto through **Solana Pay**.
+2. **Deposit**: User deposits SOL into the GridSync app.
+3. **Automated Trading**: Smart contracts use **custom Solana trading strategies** to purchase electricity when rates are favorable.
+4. **Credit Delivery**: Tokens are automatically synced and credited to the user’s electricity meter.
+
+---
+
+## 🌍 Benefits
+
+* **Consumers** save money by purchasing electricity at cheaper, off-peak times.
+* **Utility providers** benefit from smoother demand management.
+* **Global scalability** – Works across any prepaid electricity market.
+* **Frictionless onboarding** – Built directly on **Solana Pay + Solana Actions**.
+
+---
+
+## 🛠️ Technology Stack
 
 ### Frontend
-- React + Vite
-- MetaMask integration with ethers.js v6
-- Dashboard with real-time meter balances and energy consumption
+
+* React + Vite
+* Solana Wallet Adapter integration
+* Dashboard with real-time meter balances + consumption tracking
 
 ### Backend
-- Node.js + Express + SQLite3
-- RESTful APIs for user authentication and onboarding
-- Service layer for database operations
 
-### Web3 Integration
-- 1inch Limit Order Protocol for decentralized trading
-- Smart contract architecture for automated execution
-- Mock energy pricing for testing and demonstration
+* Node.js + Express + SQLite3
+* RESTful APIs for authentication and onboarding
+* Service layer for user/meter operations
 
-## Project Structure
+### Web3 (Solana)
+
+* **Solana Pay** for seamless payments
+* **Solana Actions** for direct integrations
+* **Custom smart contracts** for automated trading and tokenized electricity
+* Mock energy pricing for demo/testing
+
+---
+
+## 📂 Project Structure
 
 ```
 Gridsync/
 ├── frontend/                 # React frontend application
 ├── backend/                  # Node.js backend application
-├── contracts/               # Smart contracts
+├── contracts/                # Solana smart contracts
 └── README.md
 ```
 
-## Quick Start
+---
+
+## 🚀 Quick Start
 
 ### Backend Setup
+
 ```bash
-cd backend
-npm install
-npm run dev
+cd backend  
+npm install  
+npm run dev  
 ```
-Backend runs on `http://localhost:3001`
+
+Runs on `http://localhost:3001`
 
 ### Frontend Setup
+
 ```bash
-cd frontend
-npm install
-npm run dev
+cd frontend  
+npm install  
+npm run dev  
 ```
-Frontend runs on `http://localhost:5173`
 
-## API Endpoints
+Runs on `http://localhost:5173`
 
-- `POST /api/auth/check-user` - Check if user exists by wallet address
-- `POST /api/auth/onboard` - Create new user account
-- `GET /api/orders` - Get user orders
-- `POST /api/orders` - Create new order
+---
 
-## User Flow
+## 🔑 API Endpoints
 
-1. Connect MetaMask wallet
-2. Complete onboarding with meter ID
-3. View dashboard with meter balance and consumption
-4. Set price thresholds for automated electricity purchases
+* `POST /api/auth/check-user` – Check if user exists by wallet address
+* `POST /api/auth/onboard` – Create new user with meter ID
+* `GET /api/orders` – Retrieve user trading orders
+* `POST /api/orders` – Create new automated trading order
 
-## What's Next
+---
 
-- Smart contract deployment for tokenized electricity
-- Direct 1inch Protocol integration
-- Chainlink oracles for real-time energy prices
-- Mobile app for field usage
-- Integration with actual utility providers
+## 👩🏾‍💻 User Flow
 
-## License
+1. Connect Solana wallet (Phantom, Solflare, etc.)
+2. Complete onboarding with **meter ID**
+3. Deposit SOL using **Solana Pay**
+4. Dashboard shows **balance + consumption**
+5. Set thresholds for **automated electricity purchases**
+6. GridSync executes trades + delivers tokens to the meter
 
-This project is for educational and demonstration purposes, showcasing the potential of Web3 technology in solving real-world energy access challenges.
+---
 
+## 🔮 What’s Next
+
+* Deploy production-ready Solana smart contracts
+* Chainlink oracles for **real-time energy pricing**
+* Mobile app for **field usage in emerging markets**
+* Direct partnerships with **utility providers**
+
+---
+
+## 📜 License
+
+This project is for **educational and demonstration purposes**, showcasing how Web3 and Solana can solve real-world challenges in energy access.
+
+---
